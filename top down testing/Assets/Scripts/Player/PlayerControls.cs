@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerControls : MonoBehaviour
 {
     PlayerInputs controls;
 
@@ -20,6 +20,10 @@ public class PlayerMovement : MonoBehaviour
     public float attackWidth;
     public LayerMask enemeyLayers;
 
+    public GameObject pauseMenuUI;
+    public static bool isPaused = false;
+
+
     Vector2 movement;
     
     void Awake()
@@ -27,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
         controls = new PlayerInputs();
 
         controls.Player.Attack.performed += ctx => Attack();
+
+        controls.Player.Pause.performed += ctx => PauseOpen();
 
         controls.Player.Move.performed += ctx => movement = ctx.ReadValue<Vector2>();
         controls.Player.Move.canceled += ctx => movement = Vector2.zero;
@@ -94,6 +100,38 @@ public class PlayerMovement : MonoBehaviour
         }
 
         nextAttackTime = Time.time + 1f / attackRate;
+    }
+
+    private void PauseOpen()
+    {
+        if (isPaused)
+        {
+            Resume();
+        }
+        else
+        {
+            Pause();
+        }
+    }
+
+    private void Pause()
+    {
+        //add turn off UI
+
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+
+        //change music
+
+        isPaused = true;
+    }
+
+    public void Resume()
+    {
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        //change music
+        isPaused = false;
     }
 
     void OnEnable() 

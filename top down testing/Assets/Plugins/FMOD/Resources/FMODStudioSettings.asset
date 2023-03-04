@@ -484,8 +484,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../Documents/FMOD Studio/examples/Examples.fspro
-  sourceBankPath: ../../Documents/FMOD Studio/examples/Build
+  sourceProjectPath: ../../../Documents/FMOD Studio/examples/Examples.fspro
+  sourceBankPath: ../../../Documents/FMOD Studio/examples/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
