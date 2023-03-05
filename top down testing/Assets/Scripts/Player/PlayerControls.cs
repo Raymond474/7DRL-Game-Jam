@@ -7,7 +7,8 @@ public class PlayerControls : MonoBehaviour
 {
     PlayerInputs controls;
 
-
+    public float maxHealth = 100f;
+    float currentHealth;
     public float movementSpeed = 5f;
     public int attackDamage = 50;
     public float attackRate = 2f;
@@ -17,7 +18,7 @@ public class PlayerControls : MonoBehaviour
     public float attackRadius = 2f;
     public Rigidbody2D rb;
 
-    public Transform attackPoint;
+    public Transform attackPoint;//not needed
     public float attackLength;
     public float attackWidth;
     public LayerMask enemyLayers;
@@ -29,10 +30,18 @@ public class PlayerControls : MonoBehaviour
     private bool isWest = false;
     private bool isEast = true;
     private Vector3 attackPosition;
-
+    
+    private bool isInvincible = false;
+    public float invincibilityDurationSeconds = 1.5f;
+    public float invincibilityDeltaTime = 0.15f;
 
     Vector2 movement;
     
+    void Start()
+    {
+        currentHealth = maxHealth;
+    }
+
     void Awake()
     {
         controls = new PlayerInputs();
@@ -146,13 +155,13 @@ public class PlayerControls : MonoBehaviour
 
         Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackPosition, attackRange, enemyLayers);
 
-        foreach(Collider2D enemy in hitEnemies)
+        for (int i = 0; i < hitEnemies.Length; i++)
         {
-            if (enemy.tag == "Enemy")
+            if (hitEnemies[i].tag == "Enemy")
             {
-                enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+                hitEnemies[i].GetComponent<Enemy>().TakeDamage(attackDamage);
+                i++;//because enemies have two boxcolliders
             }
-                
         }
 
         nextAttackTime = Time.time + 1f / attackRate;
@@ -162,13 +171,13 @@ public class PlayerControls : MonoBehaviour
     {
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, enemyLayers);
 
-        foreach(Collider2D enemy in hitEnemies)
+        for (int i = 0; i < hitEnemies.Length; i++)
         {
-            if (enemy.tag == "Enemy")
+            if (hitEnemies[i].tag == "Enemy")
             {
-                enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+                hitEnemies[i].GetComponent<Enemy>().TakeDamage(attackDamage);
+                i++;//because enemies have two boxcolliders
             }
-                
         }
 
         nextAttackTime = Time.time + 1f / attackRate;
@@ -256,6 +265,57 @@ public class PlayerControls : MonoBehaviour
         isPaused = false;
     }
 
+    public void TakeDamage(int damage)
+    {
+        if (isInvincible)
+        {
+            return;
+        }
+
+        currentHealth -= damage;
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+
+        StartCoroutine(BecomeTemporarilyInvincible());
+    }
+
+    private IEnumerator BecomeTemporarilyInvincible()
+    {
+        isInvincible = true;
+        Debug.Log(this.transform.position);
+        for (float i = 0; i < invincibilityDurationSeconds; i += invincibilityDeltaTime)
+        {
+            // Alternate between 0 and 1 scale to simulate flashing
+            // if (this.transform.localScale == Vector3.one)
+            // {
+            //     ScaleModelTo(Vector3.zero);
+            // }
+            // else
+            // {
+            //     ScaleModelTo(Vector3.one);
+            // }
+            yield return new WaitForSeconds(invincibilityDeltaTime);
+        }
+
+        ScaleModelTo(Vector3.one);
+
+        isInvincible = false;
+    }   
+
+    private void ScaleModelTo(Vector3 scale)
+    {
+        this.transform.localScale = scale;
+    }
+
+
+    void Die()
+    {
+        //Add GameOver UI
+        Destroy(this.gameObject);
+    }
     void OnEnable() 
     {
         controls.Player.Enable();
