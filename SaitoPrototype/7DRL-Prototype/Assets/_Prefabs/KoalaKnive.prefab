@@ -77,7 +77,7 @@ MonoBehaviour:
   RightHandHandle: {fileID: 0}
   ModifyMovementWhileAttacking: 0
   MovementMultiplier: 0
-  PreventAllMovementWhileInUse: 1
+  PreventAllMovementWhileInUse: 0
   PreventAllAimWhileInUse: 0
   RecoilForce: 0
   Animators: []
@@ -196,7 +196,7 @@ SpriteRenderer:
   m_SortingLayerID: 47421343
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 63bbc3a420e7c1749af6342fd3dd09b8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8df8add1b513d6c48905a67f27dedebd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
