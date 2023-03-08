@@ -5331,11 +5331,11 @@ MonoBehaviour:
   DamageCausedKnockbackDirection: 3
   DamageCausedKnockbackForce: {x: 400, y: 0, z: 0}
   InvincibilityDuration: 0.1
-  RepeatDamageOverTime: 0
+  RepeatDamageOverTime: 1
   AmountOfRepeats: 3
   DurationBetweenRepeats: 1
   DamageOverTimeInterruptible: 1
-  RepeatedDamageType: {fileID: 0}
+  RepeatedDamageType: {fileID: 11400000, guid: 34cb252e231d5bf46b20591e9e9b63f7, type: 2}
   DamageTakenEveryTime: 1
   DamageTakenDamageable: 1
   DamageTakenNonDamageable: 1

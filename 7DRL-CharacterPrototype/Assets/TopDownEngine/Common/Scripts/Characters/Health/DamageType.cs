@@ -9,5 +9,9 @@ namespace MoreMountains.TopDownEngine
 	[CreateAssetMenu(menuName = "MoreMountains/TopDownEngine/DamageType", fileName = "DamageType")]
 	public class DamageType : ScriptableObject
 	{
+		void Start()
+		{
+			Debug.Log("test print");
+		}
 	}    
 }
