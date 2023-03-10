@@ -377,7 +377,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AbilityStartSfx: {fileID: 0}
-  AbilityInProgressSfx: {fileID: 0}
+  AbilityInProgressSfx: {fileID: 8300000, guid: ecaca19e5861ed0459b40e12de06ad74,
+    type: 3}
   AbilityStopSfx: {fileID: 0}
   AbilityStartFeedbacks: {fileID: 0}
   AbilityStopFeedbacks: {fileID: 0}
@@ -396,8 +397,7 @@ MonoBehaviour:
   InterpolateMovementSpeed: 0
   WalkParticles: []
   TouchTheGroundParticles: []
-  TouchTheGroundSfx:
-  - {fileID: 8300000, guid: 24fbe222c9f5c09419ff5edeb30a6764, type: 3}
+  TouchTheGroundSfx: []
 --- !u!114 &2682412783297476887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -571,7 +571,7 @@ MonoBehaviour:
   AbilityPermitted: 1
   BlockingMovementStates: 
   BlockingConditionStates: 
-  InitialWeapon: {fileID: 81117168014166049, guid: f630aff9824c8704a9399f40821efee1,
+  InitialWeapon: {fileID: 275509962421930970, guid: 8447e9b1cd6c67445a778b8ba5fda140,
     type: 3}
   CanPickupWeapons: 1
   WeaponUseFeedback: {fileID: 0}
