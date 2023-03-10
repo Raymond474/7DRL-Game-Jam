@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4410466268313682
 Transform:
   m_ObjectHideFlags: 0
@@ -4774,6 +4774,7 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4841,7 +4842,7 @@ GameObject:
   - component: {fileID: 61214810784111820}
   - component: {fileID: 50008530485997898}
   m_Layer: 18
-  m_Name: BlueCrabBullet
+  m_Name: KoalaNinjaRifleBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4907,11 +4908,11 @@ MonoBehaviour:
   ExecuteOnDisable:
     m_PersistentCalls:
       m_Calls: []
-  LifeTime: 1.5
+  LifeTime: 2
   FaceDirection: 1
   FaceMovement: 0
   MovementVector: 0
-  Speed: 200
+  Speed: 500
   Acceleration: 0
   Direction: {x: -1, y: 0, z: 0}
   DirectionCanBeChangedBySpawner: 1
@@ -4931,7 +4932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01754710d9f92ec4d9a21b81f5682667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Model: {fileID: 4790061312351694436, guid: ff018c0eb6432454b9883749b0daa952, type: 3}
+  Model: {fileID: 1880451140553914}
   CurrentHealth: 0
   Invulnerable: 0
   InitialHealth: 1
@@ -4978,7 +4979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetLayerMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 1792
   Owner: {fileID: 0}
   TriggerFilter: 195
   MinDamageCaused: 10
@@ -4989,11 +4990,11 @@ MonoBehaviour:
   DamageCausedKnockbackDirection: 3
   DamageCausedKnockbackForce: {x: 400, y: 0, z: 0}
   InvincibilityDuration: 0.1
-  RepeatDamageOverTime: 1
+  RepeatDamageOverTime: 0
   AmountOfRepeats: 3
   DurationBetweenRepeats: 1
-  DamageOverTimeInterruptible: 0
-  RepeatedDamageType: {fileID: 11400000, guid: 63da382b3c6ed044f9649fc1a24e354e, type: 2}
+  DamageOverTimeInterruptible: 1
+  RepeatedDamageType: {fileID: 0}
   DamageTakenEveryTime: 1
   DamageTakenDamageable: 1
   DamageTakenNonDamageable: 1
@@ -5044,7 +5045,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0015282631, y: -0.0045846105}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5055,7 +5056,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.594749, y: 0.61308753}
+  m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
 --- !u!50 &50008530485997898
 Rigidbody2D:
@@ -9968,6 +9969,7 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 6585f21f352bd2d428e39c0353cdc7ae, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10037,7 +10039,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4008208764464900
 Transform:
   m_ObjectHideFlags: 0
@@ -19687,6 +19689,7 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 2b93188a6f7a3824ebbe3e81e9795f24, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19810,8 +19813,8 @@ SpriteRenderer:
   m_SortingLayerID: 47421343
   m_SortingLayer: 4
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 5df87badf46f852448882c0759813d8d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300008, guid: 75df1bb8b302ceb4a9230d70d1b2e97e, type: 3}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -19838,7 +19841,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4755177917266352
 Transform:
   m_ObjectHideFlags: 0
@@ -24664,6 +24667,7 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 0}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24732,7 +24736,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6501732552575051032
 Transform:
   m_ObjectHideFlags: 0
@@ -24939,7 +24943,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6838573348494149509
 Transform:
   m_ObjectHideFlags: 0
@@ -24970,7 +24974,6 @@ MonoBehaviour:
   Feedbacks:
   - {fileID: 7926687932850708822}
   - {fileID: 8119169296999711834}
-  - {fileID: 2755887368733717986}
   InitializationMode: 2
   SafeMode: 3
   Direction: 0
@@ -25140,7 +25143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86fec89a17b5b2347a82ae1c77aced3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Active: 0
+  Active: 1
   Label: Freeze Frame
   Chance: 100
   Timing:
