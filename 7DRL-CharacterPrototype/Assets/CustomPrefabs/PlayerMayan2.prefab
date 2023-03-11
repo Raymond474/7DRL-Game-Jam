@@ -920,7 +920,7 @@ MonoBehaviour:
   AbilityPermitted: 1
   BlockingMovementStates: 
   BlockingConditionStates: 
-  InitialWeapon: {fileID: 81117168014166049, guid: f630aff9824c8704a9399f40821efee1,
+  InitialWeapon: {fileID: 81117168014166049, guid: f9ed06d29b52c74429c5ac5790982c5a,
     type: 3}
   CanPickupWeapons: 1
   WeaponUseFeedback: {fileID: 0}
@@ -1079,7 +1079,7 @@ GameObject:
   - component: {fileID: 7379002209594958886}
   - component: {fileID: 7334041026144263962}
   m_Layer: 10
-  m_Name: KoalaModel
+  m_Name: MayanModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

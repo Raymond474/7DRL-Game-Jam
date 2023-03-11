@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 4433430179855337062}
   - component: {fileID: 8711730374396096392}
   m_Layer: 0
-  m_Name: Mayan_BlowDartGhost
+  m_Name: Mayan_BlowDart_Atlatl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -173,7 +173,7 @@ MonoBehaviour:
   AutoDestroyWhenEmpty: 0
   AutoDestroyWhenEmptyDelay: 1
   CurrentAmmoLoaded: 0
-  WeaponAttachmentOffset: {x: 1, y: 0.2, z: 0}
+  WeaponAttachmentOffset: {x: -1, y: 0.2, z: 0}
   FlipWeaponOnCharacterFlip: 1
   RightFacingFlipValue: {x: 1, y: 1, z: 1}
   LeftFacingFlipValue: {x: -1, y: 1, z: 1}
@@ -210,7 +210,7 @@ MonoBehaviour:
   InitializeOnStart: 0
   Interruptable: 0
   Flipped: 0
-  ProjectileSpawnOffset: {x: 0.75, y: 0, z: 0}
+  ProjectileSpawnOffset: {x: 1.8, y: 0, z: 0}
   DefaultProjectileDirection: {x: 0, y: 0, z: 1}
   ProjectilesPerShot: 1
   SpawnTransforms: []
@@ -218,7 +218,7 @@ MonoBehaviour:
   Spread: {x: 0, y: 0, z: 0}
   RotateWeaponOnSpread: 0
   RandomSpread: 1
-  SpawnPosition: {x: 0.75, y: 0, z: 0}
+  SpawnPosition: {x: 1.8, y: 0, z: 0}
   ObjectPooler: {fileID: 0}
   SpawnFeedbacks: []
   TestShootButton: 0
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba85f5b87cb8cf84f9e09dcca90cd372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AimControl: 4
+  AimControl: 1
   RotationMode: 0
   WeaponRotationSpeed: 10
   MinimumAngle: -180
@@ -286,7 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetsMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 8192
   ObstacleMask:
     serializedVersion: 2
     m_Bits: 256
