@@ -113,7 +113,7 @@ MonoBehaviour:
   ActiveDuration: 1
   TargetLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   MinDamageCaused: 10
   MaxDamageCaused: 10
   Knockback: 0
