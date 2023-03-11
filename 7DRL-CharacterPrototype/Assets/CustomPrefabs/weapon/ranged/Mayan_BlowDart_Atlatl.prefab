@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 94d1e5cd0b8d14942a1e08829620cdd1, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_Size: {x: 0.375, y: 1.625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &3769659194201542866
@@ -95,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 3062450661299430673}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ed6ebbe2bcb3bd544a330395836665be, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -164,9 +164,9 @@ MonoBehaviour:
   UseBurstMode: 0
   BurstLength: 3
   BurstTimeBetweenShots: 0.1
-  MagazineBased: 0
-  MagazineSize: 30
-  AutoReload: 0
+  MagazineBased: 1
+  MagazineSize: 1
+  AutoReload: 1
   NoInputReload: 0
   ReloadTime: 2
   AmmoConsumedPerShot: 1
@@ -246,7 +246,7 @@ MonoBehaviour:
   ReticleHeight: 0
   ReticleAtMousePosition: 0
   RotateReticle: 0
-  ReplaceMousePointer: 1
+  ReplaceMousePointer: 0
   MouseDeadZoneRadius: 0.5
   DisplayReticle: 1
   MoveCameraTargetTowardsReticle: 0
