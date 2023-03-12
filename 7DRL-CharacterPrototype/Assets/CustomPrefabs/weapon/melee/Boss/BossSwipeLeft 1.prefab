@@ -47,10 +47,10 @@ MonoBehaviour:
   WeaponName: 
   WeaponCurrentlyActive: 1
   InputAuthorized: 1
-  TriggerMode: 0
+  TriggerMode: 1
   DelayBeforeUse: 0.04
   DelayBeforeUseReleaseInterruption: 1
-  TimeBetweenUses: 1
+  TimeBetweenUses: 0
   TimeBetweenUsesReleaseInterruption: 1
   UseBurstMode: 0
   BurstLength: 3
