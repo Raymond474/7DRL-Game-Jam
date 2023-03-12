@@ -9,21 +9,33 @@ public class EnemySpawnerNoDuplicates : MonoBehaviour
     public float chance = .5f;
 
     private bool isPrevEnemyDead = true;
+    private GameObject curEnemy;
 
     void Start()
     {
-        Debug.Log("spawn");
         StartCoroutine(spawnEnemy(frequency, enemy, chance));
     }
+
+    void Update()
+    {
+        float curHealth = curEnemy.GetComponent<MoreMountains.TopDownEngine.Health>().CurrentHealth;
+        
+        if (curHealth <= 0)
+        {
+            isPrevEnemyDead = true;
+        }
+    }
+
     private IEnumerator spawnEnemy(float frequency, GameObject enemy, float chance)
     {
         yield return new WaitForSeconds(frequency);
         float rdm = Random.value;
-        Debug.Log("rdm " + rdm);
+
         if (isPrevEnemyDead && chance >= rdm)
         {
-            Debug.Log("REAL");
             GameObject newEnemy = Instantiate(enemy, this.transform.position, Quaternion.identity);
+            curEnemy = newEnemy;
+            isPrevEnemyDead = false;
         }
         StartCoroutine(spawnEnemy(frequency, enemy, chance));
     }
