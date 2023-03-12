@@ -18,11 +18,14 @@ public class EnemySpawnerNoDuplicates : MonoBehaviour
 
     void Update()
     {
-        float curHealth = curEnemy.GetComponent<MoreMountains.TopDownEngine.Health>().CurrentHealth;
-        
-        if (curHealth <= 0)
+        if (curEnemy != null)
         {
-            isPrevEnemyDead = true;
+            float curHealth = curEnemy.GetComponent<MoreMountains.TopDownEngine.Health>().CurrentHealth;
+
+            if (curHealth <= 0)
+            {
+                isPrevEnemyDead = true;
+            }
         }
     }
 

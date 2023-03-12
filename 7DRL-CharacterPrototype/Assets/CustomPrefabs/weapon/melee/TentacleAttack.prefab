@@ -110,12 +110,12 @@ MonoBehaviour:
   HitNonDamageableFeedback: {fileID: 0}
   ExistingDamageArea: {fileID: 0}
   InitialDelay: 0
-  ActiveDuration: 1
+  ActiveDuration: 0.5
   TargetLayerMask:
     serializedVersion: 2
     m_Bits: 1024
   MinDamageCaused: 1
-  MaxDamageCaused: 2
+  MaxDamageCaused: 1
   Knockback: 0
   KnockbackForce: {x: 10, y: 2, z: 0}
   InvincibilityDuration: 0.5
