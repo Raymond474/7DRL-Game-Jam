@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 620814256779470811}
   - component: {fileID: 620814256779470810}
   - component: {fileID: 620814256779470818}
+  - component: {fileID: -9003041996626973344}
   m_Layer: 13
   m_Name: SleeperRanged
   m_TagString: Enemy
@@ -490,6 +491,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
   States:
+  - StateName: WaitingRange
+    Actions:
+      array:
+      - {fileID: 620814256779470805}
+    Transitions:
+      array:
+      - Decision: {fileID: -9003041996626973344}
+        TrueState: Moving
+        FalseState: 
   - StateName: Moving
     Actions:
       array:
@@ -937,3 +947,29 @@ MonoBehaviour:
   FaceTarget: 1
   AimAtTarget: 0
   OnlyAimWhenInState: 0
+--- !u!114 &-9003041996626973344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620814256779470813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a946a428cb16e1409d657b9041c69be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  Radius: 30
+  DetectionOriginOffset: {x: 0, y: 0, z: 0}
+  TargetLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  ObstacleDetection: 1
+  ObstacleMask:
+    serializedVersion: 2
+    m_Bits: 256
+  ObstaclesDetectionMode: 1
+  CanTargetSelf: 0
+  TargetCheckFrequency: 1
+  OverlapMaximum: 10
