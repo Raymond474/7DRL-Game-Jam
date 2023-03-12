@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8442036115825809873}
   - component: {fileID: 4543038145366281519}
   - component: {fileID: 3683872001193146354}
-  - component: {fileID: 8260995533058554597}
   m_Layer: 0
   m_Name: OlmecPunch
   m_TagString: Untagged
@@ -127,7 +126,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7212634069805969577}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba85f5b87cb8cf84f9e09dcca90cd372, type: 3}
   m_Name: 
@@ -151,39 +150,3 @@ MonoBehaviour:
   CameraTargetOffset: 0.3
   CameraTargetMaxDistance: 10
   CameraTargetSpeed: 5
---- !u!114 &8260995533058554597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7212634069805969577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 787adbe3232ded84a9544869399298f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TargetsMask:
-    serializedVersion: 2
-    m_Bits: 1024
-  ObstacleMask:
-    serializedVersion: 2
-    m_Bits: 256
-  ScanRadius: 15
-  LineOfFireBoxcastSize: {x: 0.1, y: 0.1}
-  DurationBetweenScans: 1
-  DetectionOriginOffset: {x: 0, y: 0, z: 0}
-  RotationMode: 0
-  ApplyAutoAimAsLastDirection: 1
-  MoveCameraTarget: 1
-  CameraTargetDistance: 0.5
-  CameraTargetMaxDistance: 10
-  CameraTargetSpeed: 5
-  AimMarkerPrefab: {fileID: 0}
-  DestroyAimMarkerOnWeaponDestroy: 1
-  FirstTargetFoundFeedback: {fileID: 0}
-  NewTargetFoundFeedback: {fileID: 0}
-  NoMoreTargetsFeedback: {fileID: 0}
-  Target: {fileID: 0}
-  DrawDebugRadius: 1
-  OverlapMaximum: 10
