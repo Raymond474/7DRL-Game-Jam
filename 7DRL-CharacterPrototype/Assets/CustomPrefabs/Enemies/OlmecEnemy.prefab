@@ -415,6 +415,15 @@ MonoBehaviour:
     Transitions:
       array:
       - Decision: {fileID: 6159588385781294253}
+        TrueState: Cooldown
+        FalseState: 
+  - StateName: Cooldown
+    Actions:
+      array:
+      - {fileID: 6159588385781294248}
+    Transitions:
+      array:
+      - Decision: {fileID: 6159588385781294253}
         TrueState: Detecting
         FalseState: 
   TimeInThisState: 0
