@@ -779,7 +779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetsMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8192
   ObstacleMask:
     serializedVersion: 2
     m_Bits: 256

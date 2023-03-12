@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 6485042759984238048}
   - component: {fileID: 6485163516012860538}
   m_Layer: 0
-  m_Name: SleeperGun
+  m_Name: SleeperGun 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -312,7 +312,7 @@ MonoBehaviour:
   Flipped: 0
   ProjectileSpawnOffset: {x: 0.25, y: 0, z: 0}
   DefaultProjectileDirection: {x: 0, y: 0, z: 1}
-  ProjectilesPerShot: 4
+  ProjectilesPerShot: 2
   SpawnTransforms: []
   SpawnTransformsMode: 1
   Spread: {x: 0, y: 0, z: 65}
@@ -372,8 +372,8 @@ MonoBehaviour:
   AimControl: 0
   RotationMode: 0
   WeaponRotationSpeed: 0
-  MinimumAngle: -90
-  MaximumAngle: -90
+  MinimumAngle: 90
+  MaximumAngle: 90
   MinimumMagnitude: 0.2
   ReticleType: 0
   Reticle: {fileID: 1373789777524232, guid: f31b518c2b50cc2479370c46d4485485, type: 3}
