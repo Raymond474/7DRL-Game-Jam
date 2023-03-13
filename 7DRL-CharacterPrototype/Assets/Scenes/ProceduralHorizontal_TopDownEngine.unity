@@ -273,14 +273,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62982784}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16790580826a8e844b67b3f156aed311, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 2469617523719773879, guid: 8941209d367f5c94e8ee4cf551f20218, type: 3}
-  frequency: 10
-  chance: 0
+  enemy: {fileID: 6433502193021958477, guid: 7dd6f784f169ec744bfa9a19f1c26830, type: 3}
+  frequency: 1
+  chance: 1
 --- !u!4 &62982786
 Transform:
   m_ObjectHideFlags: 0

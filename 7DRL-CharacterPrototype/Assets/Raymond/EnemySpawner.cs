@@ -12,6 +12,8 @@ public class EnemySpawner : MonoBehaviour
     {
         StartCoroutine(spawnEnemy(frequency, enemy, chance));
     }
+
+
     
     private IEnumerator spawnEnemy(float frequency, GameObject enemy, float chance)
     {
