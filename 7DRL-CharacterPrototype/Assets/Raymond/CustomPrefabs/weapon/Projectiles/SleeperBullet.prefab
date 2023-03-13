@@ -152,8 +152,8 @@ MonoBehaviour:
     m_Bits: 1024
   Owner: {fileID: 0}
   TriggerFilter: 195
-  MinDamageCaused: 10
-  MaxDamageCaused: 10
+  MinDamageCaused: 40
+  MaxDamageCaused: 40
   TypedDamages: []
   DamageDirectionMode: 1
   DamageCausedKnockbackType: 1
